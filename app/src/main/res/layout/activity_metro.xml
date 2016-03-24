@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="30dp"
+    android:focusableInTouchMode="true">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="@string/mMode"
+        android:textSize="25sp"
+        android:id="@+id/mMode"
+        android:layout_marginTop="0dp" />
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:layout_below="@id/mMode"
+    android:id="@+id/swt">
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnBar"
+        android:src="@drawable/form1"
+        android:layout_below="@+id/mMode" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnVibro"
+        android:textOn=""
+        android:textOff=""
+        android:checked="true"
+        android:drawableStart="@drawable/btn_toggle_vibro"
+        android:background="@drawable/btn_toggle_vibro_bg"
+        android:layout_gravity="left|center_vertical"
+        android:layout_marginLeft="10dp" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnFlash"
+        android:textOn=""
+        android:textOff=""
+        android:drawableStart="@drawable/btn_toggle_flash"
+        android:background="@drawable/btn_toggle_flash_bg"
+        android:layout_gravity="center" />
+
+    <ToggleButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnSound"
+        android:textOn=""
+        android:textOff=""
+        android:drawableStart="@drawable/btn_toggle_sound"
+        android:background="@drawable/btn_toggle_sound_bg"
+        android:layout_gravity="right|center_vertical"
+        android:layout_marginRight="10dp" />
+
+</FrameLayout>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:text="@string/descr"
+        android:layout_below="@+id/swt"
+        android:layout_alignParentStart="true"
+        android:id="@+id/descr"
+        android:paddingTop="0dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="45sp"
+        android:textStyle="bold"
+        android:text="100 bpm"
+        android:id="@+id/bpm"
+        android:layout_below="@+id/descr"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMinus"
+        android:background="#00000000"
+        android:src="@drawable/btn_minus"
+        android:layout_below="@+id/bpm"
+        android:layout_alignParentLeft="true"
+        android:layout_alignLeft="@+id/seekBar"
+        android:layout_marginTop="27dp" />
+
+    <SeekBar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/seekBar"
+        android:max="220"
+        android:progress="100"
+        android:progressDrawable="@drawable/progress_style"
+        android:thumb="@drawable/scrub_cntrl"
+        android:layout_below="@+id/bpm"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnPlus"
+        android:background="#00000000"
+        android:src="@drawable/btn_plus"
+        android:layout_below="@+id/bpm"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="27dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="INDICATOR"
+        android:id="@+id/ind"
+        android:layout_below="@+id/seekBar"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/indicator"
+        android:src="@drawable/indicator"
+        android:layout_below="@+id/ind"
+        android:layout_centerHorizontal="true" />
+
+    <ImageButton
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/startBtn"
+        android:background="#00000000"
+        android:src="@drawable/start_button"
+        android:adjustViewBounds="true"
+        android:baselineAlignBottom="true"
+        android:scaleType="centerCrop"
+        android:layout_below="@+id/indicator"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:onClick="onClickStart" />
+</RelativeLayout>

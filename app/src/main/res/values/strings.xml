@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Metronom</string>
+    <string name="mMode">MANUAL MODE</string>
+    <string name="descr">SET BPM YOU NEED BELOW</string>
+</resources>
